@@ -1,0 +1,38 @@
+.mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px; /* Ajuste del tamaño de la fuente del toolbar */
+  padding: 0 16px; /* Espaciado interno */
+}
+
+.title {
+  font-size: 18px; /* Tamaño del título */
+  font-weight: bold;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.table-container {
+  margin-top: 16px; /* Espacio entre el título y la tabla */
+}
+
+.customer-table .mat-header-cell, .customer-table .mat-cell {
+  padding: 8px 16px;
+  font-size: 14px; /* Ajuste del tamaño de la fuente de la tabla */
+}
+
+.mat-header-cell {
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.mat-row:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+.mat-elevation-z8 {
+  box-shadow: 0px 2px 10px -5px rgba(0, 0, 0, 0.75);
+}

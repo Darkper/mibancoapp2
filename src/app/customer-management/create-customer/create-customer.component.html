@@ -1,0 +1,27 @@
+<h2 mat-dialog-title>Crear Cliente</h2>
+<form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+  <mat-dialog-content>
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Nombre</mat-label>
+      <input matInput formControlName="name" placeholder="Ingresa el nombre del cliente" required>
+      <mat-error *ngIf="customerForm.get('name')?.hasError('required')">El nombre es requerido</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Dirección</mat-label>
+      <input matInput formControlName="address" placeholder="Ingresa la dirección del cliente">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Teléfono</mat-label>
+      <input matInput formControlName="phone" placeholder="Ingresa el número de teléfono del cliente">
+    </mat-form-field>
+
+
+    <mat-dialog-actions>
+      <button mat-button (click)="onCancel()">Cancelar</button>
+      <button mat-raised-button color="primary" type="submit" [disabled]="customerForm.invalid">Guardar</button>
+    </mat-dialog-actions>
+  </mat-dialog-content>
+
+</form>
